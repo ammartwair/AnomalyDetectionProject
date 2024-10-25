@@ -76,7 +76,7 @@ Z-scores help differentiate typical noise from unusual spikes.
 The Z-score method may not work as effectively for non-normal or heavily seasonal data.
 For such cases, alternative methods like seasonal decomposition or machine learning models could be considered.
 
-# Future Improvements 
+## Future Improvements 
 
 - Implement additional anomaly detection algorithms (e.g., Isolation Forest, Local Outlier Factor).
 - Enhance the model to adapt to concept drift.

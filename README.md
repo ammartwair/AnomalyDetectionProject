@@ -18,7 +18,6 @@ This project simulates a real-time data stream with added anomalies and implemen
 - [Algorithm Explanation](#algorithm-explanation)
 - [Limitations](#limitations)
 - [Future Improvements](#future-improvements)
-- [License](#license)
 
 ## Installation
 
@@ -26,24 +25,60 @@ To run this project, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/ammartwair/AnomalyDetectionProject.git
    cd AnomalyDetectionProject
+   ```
 
+2. **Set up a virtual environment**:
+   ```bash
+   python -m venv env
+   ```
 
-Algorithm Explanation:
+3. **Activate the virtual environment**:
+
+- On Windows:
+   ```bash
+   env\Scripts\activate
+   ```
+
+- On macOS/Linux:
+   ```bash
+   source env/bin/activate
+   ```
+
+4. **Install the required packages**: 
+   ```bash
+   pip install -r requirements.txt
+   ```
+## Usage
+
+To run the anomaly detection simulation, execute the following command:
+   ```bash
+   python anomaly_detection.py
+   ```
+
+The simulation will display a real-time plot of the data stream, highlighting any detected anomalies in red.
+
+## Algorithm Explanation
 
 This code simulates a real-time data stream, where each data point follows a sine wave pattern with added random noise.
 At random points, anomalies are introduced as sudden spikes in the data.
 Anomaly detection is based on the Z-score method, which measures how far each data point is from the mean in terms of standard deviations.
 Points with a Z-score exceeding a threshold (3 by default) are flagged as anomalies.
 
-Why Z-score Method:
+### Why Z-score Method
 
 This method is straightforward and effective for normally distributed data with noise.
 Z-scores help differentiate typical noise from unusual spikes.
 
-Limitations:
+## Limitations
 
 The Z-score method may not work as effectively for non-normal or heavily seasonal data.
 For such cases, alternative methods like seasonal decomposition or machine learning models could be considered.
 
+# Future Improvements 
+
+- Implement additional anomaly detection algorithms (e.g., Isolation Forest, Local Outlier Factor).
+- Enhance the model to adapt to concept drift.
+- Include performance metrics to evaluate the effectiveness of the anomaly detection.
+- Add unit tests to ensure code robustness and reliability.
